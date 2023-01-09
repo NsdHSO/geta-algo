@@ -10,6 +10,14 @@
 #include <stdlib.h>
 
 using namespace std;
+
+struct Rectangle {
+    int length;
+    int breadth;
+};
+
+
+
 void swap(int &p, int &b){
     int temp;
     temp = p;
@@ -17,18 +25,26 @@ void swap(int &p, int &b){
     b = temp;
 }
 
+int area (struct Rectangle r ){
+    return r.length * r.breadth;;
+}
+
+int perimeter(struct Rectangle r){
+    return 2*(r.length*r.breadth);
+}
 int main(int argc, const char * argv[]) {
-    int length=0, breadth=0;
+    
+    Rectangle r ={0,0};
     
     cout<<"ENTER Lenght"<<endl;
-    cin>>length;
+    cin>>r.length;
     
     cout<<"ENTER breadth"<<endl;
-    cin>>breadth;
+    cin>>r.breadth;
     
-    int area = length * breadth;
-    int peri = 2 *(length+breadth);
+    int areaS = area(r);
+    int peri =perimeter(r);
     
-    cout<<"AREA: "<< area<<endl<<"PERI: "<<peri<<endl;
+    cout<<"AREA: "<< areaS<<endl<<"PERI: "<<peri<<endl;
     return 0;
 }
