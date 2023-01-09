@@ -30,23 +30,23 @@ int * newArray(int length){
 
  void name(struct Student *student){
      student->lastName[0]='t';
-    
-
-    
  };
 
+
+struct Student * newStudent(){
+    struct Student *student;
+    student = (struct Student * )malloc(sizeof(struct Student));
+    student->address[0]='S';
+    student->lastName[0]='S';
+    student->firstName[0]='S';
+    
+    return student;
+};
+
+
+
 int main(int argc, const char * argv[]) {
-    int a=10,b=20;
-    int *p;
-    p = newArray(10);
-    p[2] = 20;
-    cout << p[2]<<endl;
-    swap(a, b);
-    cout<< a<< endl;
-    cout<< b<<endl;
-    
-    struct Student std;
-    name(&std);
-    cout<<std.lastName<<endl;
-    
+    struct Student *student;
+    student = newStudent();
+    cout<<student->lastName[0]<<endl;
 }
