@@ -11,9 +11,27 @@
 
 using namespace std;
 
-struct Rectangle {
+class Rectangle {
+public:
     int length;
     int breadth;
+    
+    int area ( ){
+        return length * breadth;;
+    }
+
+    int perimeter(){
+        return 2*(length*breadth);
+    }
+
+    void initalizeStruct(){
+        cout<<"ENTER Lenght"<<endl;
+        cin>>length;
+        
+        cout<<"ENTER breadth"<<endl;
+        cin>>breadth;
+    };
+
 };
 
 
@@ -25,32 +43,16 @@ void swap(int &p, int &b){
     b = temp;
 }
 
-int area (struct Rectangle r ){
-    return r.length * r.breadth;;
-}
-
-int perimeter(struct Rectangle r){
-    return 2*(r.length*r.breadth);
-}
-
-struct Rectangle initalizeStruct(struct Rectangle *str){
-    cout<<"ENTER Lenght"<<endl;
-    cin>>str->length;
-    
-    cout<<"ENTER breadth"<<endl;
-    cin>>str->breadth;
-    return *str;
-};
 
 int main(int argc, const char * argv[]) {
     
     Rectangle r ={0,0};
     
-    initalizeStruct(&r);
+    r.initalizeStruct();
 
     
-    int areaS = area(r);
-    int peri =perimeter(r);
+    int areaS = r.area();
+    int peri =r.perimeter();
     
     cout<<"AREA: "<< areaS<<endl<<"PERI: "<<peri<<endl;
     return 0;
