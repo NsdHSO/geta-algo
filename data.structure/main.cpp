@@ -17,36 +17,18 @@ void swap(int &p, int &b){
     b = temp;
 }
 
-struct Student{
-    char firstName[25];
-    char lastName[25];
-    char address[50];
-};
-
-int * newArray(int length){
-    int *p = (int *)malloc(sizeof(int) * length);
-    return p;
-}
-
- void name(struct Student *student){
-     student->lastName[0]='t';
-    
-
-    
- };
-
 int main(int argc, const char * argv[]) {
-    int a=10,b=20;
-    int *p;
-    p = newArray(10);
-    p[2] = 20;
-    cout << p[2]<<endl;
-    swap(a, b);
-    cout<< a<< endl;
-    cout<< b<<endl;
+    int length=0, breadth=0;
     
-    struct Student std;
-    name(&std);
-    cout<<std.lastName<<endl;
+    cout<<"ENTER Lenght"<<endl;
+    cin>>length;
     
+    cout<<"ENTER breadth"<<endl;
+    cin>>breadth;
+    
+    int area = length * breadth;
+    int peri = 2 *(length+breadth);
+    
+    cout<<"AREA: "<< area<<endl<<"PERI: "<<peri<<endl;
+    return 0;
 }
