@@ -32,15 +32,22 @@ int area (struct Rectangle r ){
 int perimeter(struct Rectangle r){
     return 2*(r.length*r.breadth);
 }
+
+struct Rectangle initalizeStruct(struct Rectangle *str){
+    cout<<"ENTER Lenght"<<endl;
+    cin>>str->length;
+    
+    cout<<"ENTER breadth"<<endl;
+    cin>>str->breadth;
+    return *str;
+};
+
 int main(int argc, const char * argv[]) {
     
     Rectangle r ={0,0};
     
-    cout<<"ENTER Lenght"<<endl;
-    cin>>r.length;
-    
-    cout<<"ENTER breadth"<<endl;
-    cin>>r.breadth;
+    initalizeStruct(&r);
+
     
     int areaS = area(r);
     int peri =perimeter(r);
