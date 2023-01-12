@@ -35,18 +35,48 @@ int * newArray(int length){
     
  };
 
-int main(int argc, const char * argv[]) {
-    int a=10,b=20;
-    int *p;
-    p = newArray(10);
-    p[2] = 20;
-    cout << p[2]<<endl;
-    swap(a, b);
-    cout<< a<< endl;
-    cout<< b<<endl;
+int sumNaturalNumb(int n){
+    if(n>0){
+        return sumNaturalNumb(n-1)+n ;
+    }
+    return 0;
+}
+
+int power (int x, int n){
+    if(n<=0){
+        return 1;
+    }
+    return power(x, n-1) * x;
+}
+
+int powe2(int x, int n){
+    if(n<=0){
+        return 1;
+    }
+    if(n%2==0){
+        return powe2(x*n, n/2);
+    }
+    return x*powe2(x*n, (n-1)/2);
+}
+
+int factorial(int n){
+    if(n<=1){
+        return 1;
+    }
+    return factorial(n-1)*n;
+}
+
+int taylorSer (int number){
+    if(number <=1){
+        return 1;
+    }
     
-    struct Student std;
-    name(&std);
-    cout<<std.lastName<<endl;
+}
+int main(int argc, const char * argv[]) {
+    cout<<sumNaturalNumb(3)<<endl;
+    cout<<power(2, 4)<<endl;
+    cout<<powe2(2, 4)<<endl;
+    cout<<factorial(5)<<endl;
+    
     
 }
