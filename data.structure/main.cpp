@@ -66,17 +66,40 @@ int factorial(int n){
     return factorial(n-1)*n;
 }
 
-int taylorSer (int number){
-    if(number <=1){
+double taylorSer (double x,double number){
+    static double p =1, f = 1;
+    double r;
+    if(number == 0){
         return 1;
     }
-    
+    r = taylorSer(x, number-1);
+    p = p*x;
+    f = f * number;
+    return r + p/f;
+}
+
+double taylorWithHorner(double x, double number){
+    static double sum = 1;
+    if(number == 0 ){
+        return sum;
+    }
+    sum = 1 + (x/number * sum);
+    return taylorWithHorner(x, number - 1 );
+}
+
+int fibonaci(int number){
+    if(number ==1){
+        return 1;
+    }
+    return fibonaci(number - 1) + number;;
 }
 int main(int argc, const char * argv[]) {
     cout<<sumNaturalNumb(3)<<endl;
     cout<<power(2, 4)<<endl;
     cout<<powe2(2, 4)<<endl;
     cout<<factorial(5)<<endl;
-    
+    cout<<taylorSer(3, 10)<<endl;
+    cout<<taylorWithHorner(3, 2)<<endl;
+    cout<<fibonaci(4)<<endl;
     
 }
