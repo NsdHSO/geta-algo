@@ -93,27 +93,44 @@ int fibonaci(int number){
     }
     return fibonaci(number - 1) + number;;
 }
+static float recureCall[] ={};
+
+void initList(int number, int length,float  numbers[]){
+    int i = 0;
+    while (i <= length) {
+        numbers[i] = number;
+        i++;
+    }
+}
 
 int fiv ( int number){
+    
     if(number <= 1){
+        recureCall[number] = number;
         return number;
     }
-    return fiv(number-1) + fiv(number - 2);
+    else{
+        if(recureCall[number-2] == -1){
+            recureCall[number-2] = fiv(number-2);
+        }
+        if(recureCall[number -1]== -1){
+            recureCall[number-1] = fiv(number-1);
+        }
+        return recureCall[number-2] + recureCall[number -1];
+    }
+
 }
 int main(int argc, const char * argv[]) {
-    cout<<sumNaturalNumb(3)<<endl;
-    cout<<power(2, 4)<<endl;
-    cout<<powe2(2, 4)<<endl;
-    cout<<factorial(5)<<endl;
-    cout<<taylorSer(3, 10)<<endl;
-    cout<<taylorWithHorner(3, 2)<<endl;
-    cout<<fibonaci(4)<<endl;
-    static int d =0;
-    for(int i =0; i< 4; i++){
-        for(int j=0; j<4; j++){
-            d ++;
-            cout<<fiv(d)<<' ';
-        }
-        cout<<endl;
+    int d;
+    cout<<"ENTER Fibonaci Number"<<endl;
+    cin>>d;
+    initList(-1,d-1 ,recureCall);
+    
+    cout<<fiv(d)<<endl;
+    for (int i = 0 ; i< d-1; i++){
+        cout<<recureCall[i]<<' ';
     }
+    return  0;
+    
+    
 }
