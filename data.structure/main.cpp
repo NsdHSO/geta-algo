@@ -93,6 +93,13 @@ int fibonaci(int number){
     }
     return fibonaci(number - 1) + number;;
 }
+
+int fiv ( int number){
+    if(number <= 1){
+        return number;
+    }
+    return fiv(number-1) + fiv(number - 2);
+}
 int main(int argc, const char * argv[]) {
     cout<<sumNaturalNumb(3)<<endl;
     cout<<power(2, 4)<<endl;
@@ -101,5 +108,12 @@ int main(int argc, const char * argv[]) {
     cout<<taylorSer(3, 10)<<endl;
     cout<<taylorWithHorner(3, 2)<<endl;
     cout<<fibonaci(4)<<endl;
-    
+    static int d =0;
+    for(int i =0; i< 4; i++){
+        for(int j=0; j<4; j++){
+            d ++;
+            cout<<fiv(d)<<' ';
+        }
+        cout<<endl;
+    }
 }
