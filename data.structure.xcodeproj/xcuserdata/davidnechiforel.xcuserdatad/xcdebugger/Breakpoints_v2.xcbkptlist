@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "57A419A7-FE8C-4E5E-929D-3C61794F62D8"
+            uuid = "CD3F2B0E-B1EA-453D-99F2-3A8F70FE97FB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "data.structure/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "insertElement(student, item, index)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "binarySearch(stud, low, high, key)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "99E296CF-5B96-4F09-B0B9-43454BA7FA00"
-            shouldBeEnabled = "Yes"
+            uuid = "AB0CBAC7-AA2F-45A0-8B8B-1F31BF4550DE"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "data.structure/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "insertElement(student, item, index)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AD3D02DD-E3CC-43CA-8126-3836158C9DA3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "data.structure/main.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "insertElement(student, item, index)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "binarySearch(stud, low, high, key)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

@@ -6,7 +6,7 @@
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "student.numbers[2]">
+               value = "stud.numbers[mid]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -15,6 +15,9 @@
       </ContextState>
       <ContextState
          contextName = "perimeter(Rectangle):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "insertElement(Array*, int, int):main.cpp">
       </ContextState>
       <ContextState
          contextName = "addElement(Array&amp;, int):main.cpp">
@@ -32,6 +35,9 @@
       </ContextState>
       <ContextState
          contextName = "display(Array):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "binarySearch(Array, int, int, int, int):main.cpp">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

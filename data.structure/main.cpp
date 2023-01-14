@@ -86,35 +86,33 @@ int linearSearch(struct Array student, int item){
     return find;
 }
 
+int binarySearch( struct Array stud,int low, int high, int key){
+    if( low <= high){
+        int mid = (low + high) / 2;
+        if(key == stud.numbers[mid]){
+            return mid;
+        }else if( key < stud.numbers[mid] ){
+            return binarySearch(stud, low, mid-1,key);
+        }else{
+            return binarySearch(stud, mid + 1, high, key);
+        }
+    }
+    return  -1;
+    
+}
+
 int main(int argc, const char * argv[]) {
     struct Array stdu;
-    cout<<"Enter A size of Array";
-    cin>>stdu.size;
-    cout<<"Enter a lenght of Array";
-    cin>>stdu.length;
-    while (stdu.length > stdu.size) {
-        cout<<"Enter a correct lenght of Array";
-        cin>>stdu.length;
-    }
-    
+    stdu.size = 50;
+    stdu.length = 43;
     stdu.numbers = (int *)(malloc(sizeof(int) * stdu.size));
-    
-    int i =0;
-    while (stdu.length> i) {
-        cout<<"Enter note of student: ";
-        cin>>stdu.numbers[i];
-        i++;
+    for(int i = 0 ; i<= stdu.length; i++){
+        stdu.numbers[i] = i * 4* 3*2;
     }
-    i = 0;
-    cout<<linearSearch(stdu, 25);
-
+  
+    cout<<linearSearch(stdu, 25)<< endl;
+    cout<<binarySearch(stdu, 0, stdu.length, 984)<< endl;
     display(stdu);
     
-    addElement(&stdu, 20);
-    display(stdu);
-    insertElement(&stdu, 10, 20);
-    display(stdu);
-    removeElement(&stdu, 3);
-    display(stdu);
     return  0;
 }
