@@ -39,7 +39,7 @@ void addElement(struct Array *student, int item){
 void insertElement(struct Array *student, int item, int index){
     if(index == student->length){
         if(index == student->size){
-            cout<<"You don't have space";
+            cout<<"You don't have space"<<endl;
         }else{
             addElement(student,item);
         }
@@ -51,9 +51,39 @@ void insertElement(struct Array *student, int item, int index){
         student->length++;
     }
     if(index > student->size){
-        cout<<"You don't have space";
+        cout<<"You don't have space"<<endl;
     }
     
+}
+void removeElement(struct Array *student, int index){
+    if(index == student -> length){
+        student->numbers[index] = 0;
+        student->length--;
+    }
+    if(index < student->length){
+        for(int i = index ; i < student->length ; i ++){
+            student->numbers[i] = student->numbers[i+1];
+        }
+        student->numbers[student->length] = 0;
+        student->length--;
+    }
+    if( index > student->length){
+        cout<<"There is trash value"<<endl;
+    }
+    if(index > student->size){
+        cout<<"This index do not exist"<<endl;
+    }
+    
+}
+
+int linearSearch(struct Array student, int item){
+    int find=0;
+    for (int i = 0; i< student.length; i++){
+        if(student.numbers[i] == item){
+            find = i;
+        }
+    }
+    return find;
 }
 
 int main(int argc, const char * argv[]) {
@@ -76,12 +106,15 @@ int main(int argc, const char * argv[]) {
         i++;
     }
     i = 0;
-    
+    cout<<linearSearch(stdu, 25);
+
     display(stdu);
     
     addElement(&stdu, 20);
     display(stdu);
     insertElement(&stdu, 10, 20);
+    display(stdu);
+    removeElement(&stdu, 3);
     display(stdu);
     return  0;
 }
