@@ -6,18 +6,32 @@
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "f(x,c) * x">
+               value = "student.numbers[2]">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "perimeter(Rectangle):main.cpp">
       </ContextState>
       <ContextState
          contextName = "fiv(int):main.cpp">
       </ContextState>
       <ContextState
+         contextName = "perimeter(Rectangle):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "addElement(Array&amp;, int):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "addElement(Array*, int):main.cpp">
+      </ContextState>
+      <ContextState
          contextName = "main:main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "stdu.numbers[2]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "display(Array):main.cpp">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
