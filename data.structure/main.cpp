@@ -101,6 +101,51 @@ int binarySearch( struct Array stud,int low, int high, int key){
     
 }
 
+int get(struct Array stud, int index){
+   if(index >=0 && stud.length >= index)
+    return stud.numbers[index];
+    
+    return -1;
+}
+
+int max(struct Array stud){
+    int max= 0;
+    for(int i=0; i< stud.length; i++){
+        if(stud.numbers[i] > max){
+            max = stud.numbers[i];
+        }
+    }
+    return max;
+}
+int min(struct Array stud){
+    int min= stud.numbers[0];
+    for(int i=0; i< stud.length; i++){
+        if(stud.numbers[i] < min){
+            min = stud.numbers[i];
+        }
+    }
+    return min;
+}
+
+int sum(struct Array stud){
+    int sum=0;
+    
+    for(int i=0; i< stud.length; i++){
+        sum+= stud.numbers[i];
+    }
+    return sum;
+}
+
+int sumRecur(struct Array stud, int n){
+    if(n < 0){
+        return 0;
+    }
+    return sumRecur(stud, n-1) + stud.numbers[n];
+}
+
+float avg(struct Array stud){
+    return  sumRecur(stud, stud.length -1) / stud.length;
+}
 int main(int argc, const char * argv[]) {
     struct Array stdu;
     stdu.size = 50;
@@ -113,6 +158,13 @@ int main(int argc, const char * argv[]) {
     cout<<linearSearch(stdu, 25)<< endl;
     cout<<binarySearch(stdu, 0, stdu.length, 984)<< endl;
     display(stdu);
-    
+    cout<<"--------"<<endl;
+    cout<<get(stdu, 3)<<endl;
+    cout<<max(stdu)<<endl;
+    cout<<min(stdu)<<endl;
+    cout<<sum(stdu)<<endl;
+    cout<<sumRecur(stdu, stdu.length-1)<<endl;
+    cout<<avg(stdu)<<endl;
+
     return  0;
 }
