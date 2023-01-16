@@ -3,52 +3,62 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "GLOBAL">
+         contextName = "positive(Array*):main.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "stud-&gt;numbers[i]">
+               value = "arr-&gt;numbers[j]">
+            </PersistentString>
+            <PersistentString
+               value = "arr-&gt;numbers[j+1]">
+            </PersistentString>
+            <PersistentString
+               value = "arr-&gt;numbers[j+4]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "fiv(int):main.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "revArray(Array*):main.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "perimeter(Rectangle):main.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "insertElement(Array*, int, int):main.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "addElement(Array&amp;, int):main.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "addElement(Array*, int):main.cpp">
-      </ContextState>
-      <ContextState
-         contextName = "main:main.cpp">
+         contextName = "rotationRight(Array*, int):main.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "stdu.numbers[2]">
+               value = "stud-&gt;numbers[43]">
+            </PersistentString>
+            <PersistentString
+               value = "stud-&gt;numbers[n+1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "anotherReverse(Array*):main.cpp">
+         contextName = "rotationLeft(Array*, int):main.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "stud-&gt;numbers[2]">
+               value = "stud-&gt;numbers[42]">
+            </PersistentString>
+            <PersistentString
+               value = "stud-&gt;numbers[n]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "display(Array):main.cpp">
+         contextName = "sortArray(Array*, int):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr-&gt;numbers[i]">
+            </PersistentString>
+            <PersistentString
+               value = "arr-&gt;numbers[i+1]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "binarySearch(Array, int, int, int, int):main.cpp">
+         contextName = "checkIsSorded(Array):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "stud.numbers[40] ">
+            </PersistentString>
+            <PersistentString
+               value = "stud.numbers[i]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

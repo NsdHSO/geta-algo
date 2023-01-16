@@ -25,7 +25,7 @@ struct Array {
 
 void display(struct Array studends){
     cout<<"NUmber of student : "<<endl;
-    for(int i = 0; i< studends.length; i++){
+    for(int i = 0; i<= studends.length; i++){
         cout<<studends.numbers[i]<<' ';
     }
     cout<<endl;
@@ -169,6 +169,62 @@ void anotherReverse(struct Array * stud){
         
     }
 }
+int d =0;
+int rotationLeft(struct Array * stud, int n){
+    if(n==0){
+        d = stud->numbers[0];
+    }
+ 
+    stud->numbers[n] = stud->numbers[n+1];
+
+    if(n == stud->length-1){
+        int a = stud->length;
+        stud->numbers[a-1] = d;
+        return n;
+    }
+  
+    return rotationLeft(stud, n+1);
+    
+}
+
+int rotationRight(struct Array * stud, int n){
+    if(n == 0 ){
+        d = stud->numbers[0];
+    }if(n == stud->length){
+        stud->numbers[n] = d;
+        return n;
+    }
+    stud->numbers[n] = stud->numbers[n+1];
+    return rotationRight(stud, n+1);
+}
+
+int checkIsSorded(struct Array stud){
+    int acc = 0;
+    for(int i=0, j=1; stud.length-1 > i; i++, j++){
+        if(stud.numbers[i] > stud.numbers[j]){
+            return -1;
+        }
+    }
+    return acc;
+}
+
+void positive(struct Array *arr){
+    int i =0, j=arr->length;
+    while (i<j) {
+        while (arr->numbers[i] < 0) {
+            i++;
+        }
+        while (arr->numbers[j] >= 0) {
+            j--;
+        }
+        if(i<j){
+            swap(arr->numbers[i], arr->numbers[j]);
+        }
+    }
+    
+}
+
+
 int main(int argc, const char * argv[]) {
     struct Array stdu;
     stdu.size = 50;
@@ -177,10 +233,10 @@ int main(int argc, const char * argv[]) {
     for(int i = 0 ; i<= stdu.length; i++){
         stdu.numbers[i] = i * 4* 3*2;
     }
-  
+    
+
     cout<<linearSearch(stdu, 25)<< endl;
     cout<<binarySearch(stdu, 0, stdu.length, 984)<< endl;
-    display(stdu);
     cout<<"--------"<<endl;
     cout<<get(stdu, 3)<<endl;
     cout<<max(stdu)<<endl;
@@ -189,11 +245,40 @@ int main(int argc, const char * argv[]) {
     cout<<sumRecur(stdu, stdu.length-1)<<endl;
     cout<<avg(stdu)<<endl;
 
-    revArray(&stdu);
-
-    display(stdu);
-    anotherReverse(&stdu);
-    display(stdu);
-
+//    revArray(&stdu);
+//    anotherReverse(&stdu);
+//    rotationLeft(&stdu, 0);
+//    rotationLeft(&stdu, 0);
+//    rotationLeft(&stdu, 0);
+//    cout<<checkIsSorded(stdu)<< endl;
+//
+//    display(stdu);
+//    rotationRight(&stdu, 0);
+//    rotationRight(&stdu, 0);
+//    rotationRight(&stdu, 0);
+//
+//    display(stdu);
+//    cout<<checkIsSorded(stdu)<< endl;
+    
+    struct Array students;
+    students.size = 100;
+    students.length = 10;
+    students.numbers =(int *)(malloc(sizeof(int) * students.size));
+    for(int i =1; i<= 9; i++){
+        if(i == 3 || i == 4){
+            students.numbers[i] = i * -1 * 2;
+            
+        }
+        else if( i == 8 || i == 9
+                ){
+            students.numbers[i] = i * -1 * 7;
+        }
+        else{
+            students.numbers[i] = i * 5 +1;
+        }
+    }
+    display(students);
+    positive(&students);
+    cout<<"------------< SORT";
     return  0;
 }
