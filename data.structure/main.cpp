@@ -146,6 +146,29 @@ int sumRecur(struct Array stud, int n){
 float avg(struct Array stud){
     return  sumRecur(stud, stud.length -1) / stud.length;
 }
+
+void revArray(struct Array * stud){
+    int temp[stud->size];
+    int i= stud->length;
+    for(int j = 0; i>=0; i--,j++){
+        temp[j] = stud->numbers[i];
+    }
+    
+    for(int i =0 ; i< stud->length; i++){
+        stud->numbers[i] = temp[i];
+    }
+}
+
+void anotherReverse(struct Array * stud){
+    int i = stud->length -1, j =0;
+    
+    for(; j < i; i--, j++){
+        int temp = stud->numbers[i];
+        stud->numbers[i] = stud->numbers[j];
+        stud->numbers[j] = temp;
+        
+    }
+}
 int main(int argc, const char * argv[]) {
     struct Array stdu;
     stdu.size = 50;
@@ -165,6 +188,12 @@ int main(int argc, const char * argv[]) {
     cout<<sum(stdu)<<endl;
     cout<<sumRecur(stdu, stdu.length-1)<<endl;
     cout<<avg(stdu)<<endl;
+
+    revArray(&stdu);
+
+    display(stdu);
+    anotherReverse(&stdu);
+    display(stdu);
 
     return  0;
 }

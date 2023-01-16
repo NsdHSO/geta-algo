@@ -6,12 +6,15 @@
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "stud.numbers[mid]">
+               value = "stud-&gt;numbers[i]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "fiv(int):main.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "revArray(Array*):main.cpp">
       </ContextState>
       <ContextState
          contextName = "perimeter(Rectangle):main.cpp">
@@ -30,6 +33,14 @@
          <PersistentStrings>
             <PersistentString
                value = "stdu.numbers[2]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "anotherReverse(Array*):main.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "stud-&gt;numbers[2]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
